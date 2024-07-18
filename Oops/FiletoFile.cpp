@@ -1,0 +1,4 @@
+class Meet
+{
+    int god;
+};
