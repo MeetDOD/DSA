@@ -3,20 +3,21 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
 
-    int i = 1;
-
-    while (i <= n)
+    for (int i = 1; i < 5; i++)
     {
-        int j = 1;
-        while (j <= n)
+        for (int j = 1; j < 5; j++)
         {
-            cout << n - j + 1;
-            j = j + 1;
+            cout << j << " ";
         }
         cout << endl;
-        i = i + 1;
     }
+
+    return 0;
 }
+
+// output
+// 1 2 3 4
+// 1 2 3 4
+// 1 2 3 4
+// 1 2 3 4
