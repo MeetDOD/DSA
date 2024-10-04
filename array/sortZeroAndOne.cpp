@@ -1,49 +1,38 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
-
-void sortedArray(int arr[], int size)
-{
-    int left = 0;
-    int right = size - 1;
-
-    while (left < right)
-    {
-        while (arr[left] == 0 && left < right)
-        {
-            left++;
-        }
-
-        while (arr[right] == 1 && left < right)
-        {
-            right--;
-        }
-
-        if (left < right)
-        {
-            swap(arr[left], arr[right]);
-            left++;
-            right--;
-        }
-    }
-}
-
 int main()
 {
 
-    int arr[5] = {1, 0, 0, 1, 1};
+    int arr[10] = {1, 1, 1, 0, 0, 0, 2, 2, 2, 1};
 
-    printArray(arr, 5);
-    sortedArray(arr, 5);
-    printArray(arr, 5);
+    int i = 0;
+    int j = 0;
+    int k = 9;
+
+    while (j <= k)
+    {
+        if (arr[j] == 1)
+        {
+            j++;
+        }
+        else if (arr[j] == 2)
+        {
+            swap(arr[j], arr[k]);
+            k--;
+        }
+        else
+        {
+            swap(arr[j], arr[i]);
+            i++;
+            j++;
+        }
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << arr[i] << " ";
+    }
 
     return 0;
 }
