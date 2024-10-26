@@ -14,13 +14,13 @@ int power(int a, int b)
 
     int ans = power(a, b / 2);
 
-    if (b & 1)
+    if (b % 2 == 0)
     {
-        return a * ans * ans; // odd
+        return ans * ans; // even
     }
     else
     {
-        return ans * ans; // even
+        return a * ans * ans; // odd
     }
 
     // if(b%2 == 0){
