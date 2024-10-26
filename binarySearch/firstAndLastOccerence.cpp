@@ -62,6 +62,13 @@ int main()
 
     int even[10] = {1, 2, 3, 3, 3, 3, 3, 3, 3, 4};
 
+    cout << "The given array is : ";
+    for (int i = 0; i < 9; i++)
+    {
+        cout << even[i] << " ";
+    }
+    cout << endl;
+
     int FO = firstOccerence(even, 10, 3);
     int LO = lastOccerence(even, 10, 3);
 
