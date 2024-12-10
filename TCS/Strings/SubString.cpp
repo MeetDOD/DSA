@@ -4,7 +4,8 @@ using namespace std;
 int main()
 {
 
-    string name = "god";
+    string name = "god godd";
+    string sub = "god";
     int count = 0;
 
     for (int i = 0; i < name.length(); i++)
@@ -17,6 +18,14 @@ int main()
     }
 
     cout << "The number of substr is : " << count << endl;
+
+    for (int i = 0; i < name.size(); i++)
+    {
+        if (name.substr(i, sub.size()) == sub)
+        {
+            cout << "Found at index " << i << endl;
+        }
+    }
 
     return 0;
 }
