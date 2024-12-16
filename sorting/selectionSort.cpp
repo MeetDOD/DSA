@@ -1,34 +1,34 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-void selectionSort(int arr[], int n){
-    for(int i = 0; i<n;i++){
-        int minElement = i;
-        for(int j = i + 1; j<n;j++){
-            if(arr[minElement] > arr[j]){
-                minElement = j;
+int main()
+{
+
+    vector<int> arr = {9, 8, 7, 1, 2, 3, 5, 4};
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = i + 1; j < arr.size(); j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
             }
         }
-        swap(arr[minElement],arr[i]);
     }
-}
 
-void printArray(int arr[], int n){
-    for(int i = 0; i<n;i++){
-        cout<<arr[i]<<" ";
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " ";
     }
-    cout<<endl;
-}
-
-int main() {
-    
-    int arr[5] = {9999,99999,999,9,99};
-    cout<<"<-----------Original Array--------------->"<<endl;
-    printArray(arr,5);
-    cout<<"<-----------Selection Sort--------------->"<<endl;
-    selectionSort(arr,5);
-    printArray(arr,5);
-    cout<<"<-----------Sorted--------------->"<<endl;
 
     return 0;
 }
